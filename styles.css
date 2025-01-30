@@ -1,0 +1,128 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  width: 100vw;
+  max-height: 100%;
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Global Styles */
+:root {
+  --dark-blue: #202733;
+  --dark-greyish-blue: #313a48;
+  --greyish-blue: #4f5d74;
+  --light-cyan: #cee3e9;
+  --neon-green: #53ffaa;
+}
+
+.container {
+  font-family: "Manrope", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+  width: 100%;
+  height: 100%;
+}
+
+.advice-generator {
+  margin-bottom: 50px;
+  width: 90%;
+  min-height: 343px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-greyish-blue);
+}
+
+.advice-number-container {
+  font-size: 11px;
+  font-weight: bolder;
+  line-height: 15px;
+  letter-spacing: 3.46px;
+  color: var(--neon-green);
+}
+
+.advice-content {
+  width: 85%;
+  margin-block: 25px;
+  font-weight: bolder;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: -0.257143px;
+  color: var(--light-cyan);
+}
+
+.dice-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background-color: var(--neon-green);
+  position: absolute;
+  bottom: -30px;
+}
+
+.dice-icon:hover {
+  background-color: var(--neon-green);
+  box-shadow: 0 0 20px var(--neon-green), 0 0 40px var(--neon-green);
+}
+
+@media screen and (min-width: 468px) {
+  .advice-generator {
+    width: 40%;
+  }
+
+  .advice-number-container {
+    font-size: 13px;
+  }
+
+  .advice-content {
+    margin-block: 40px;
+    font-size: 28px;
+  }
+
+  .dice-icon {
+    width: 64px;
+    height: 64px;
+  }
+}
